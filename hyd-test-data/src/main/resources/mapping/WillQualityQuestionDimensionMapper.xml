@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mentpeak.website.mapper.WillQualityQuestionDimensionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mentpeak.website.entity.WillQualityQuestionDimension">
+        <id column="id" property="id" />
+        <result column="question_id" property="questionId" />
+        <result column="question_dimension_id" property="questionDimensionId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, question_id, question_dimension_id
+    </sql>
+
+</mapper>

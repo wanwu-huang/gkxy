@@ -1,0 +1,57 @@
+{
+  "groups": [
+    {
+      "name": "platform.swagger",
+      "type": "com.mentpeak.website.config.SwaggerConfig",
+      "sourceType": "com.mentpeak.website.config.SwaggerConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "platform.swagger.base-package",
+      "type": "java.lang.String",
+      "sourceType": "com.mentpeak.website.config.SwaggerConfig"
+    },
+    {
+      "name": "platform.swagger.description",
+      "type": "java.lang.String",
+      "sourceType": "com.mentpeak.website.config.SwaggerConfig"
+    },
+    {
+      "name": "platform.swagger.email",
+      "type": "java.lang.String",
+      "sourceType": "com.mentpeak.website.config.SwaggerConfig"
+    },
+    {
+      "name": "platform.swagger.group-name",
+      "type": "java.lang.String",
+      "sourceType": "com.mentpeak.website.config.SwaggerConfig"
+    },
+    {
+      "name": "platform.swagger.name",
+      "type": "java.lang.String",
+      "sourceType": "com.mentpeak.website.config.SwaggerConfig"
+    },
+    {
+      "name": "platform.swagger.terms-of-service-url",
+      "type": "java.lang.String",
+      "sourceType": "com.mentpeak.website.config.SwaggerConfig"
+    },
+    {
+      "name": "platform.swagger.title",
+      "type": "java.lang.String",
+      "sourceType": "com.mentpeak.website.config.SwaggerConfig"
+    },
+    {
+      "name": "platform.swagger.url",
+      "type": "java.lang.String",
+      "sourceType": "com.mentpeak.website.config.SwaggerConfig"
+    },
+    {
+      "name": "platform.swagger.version",
+      "type": "java.lang.String",
+      "sourceType": "com.mentpeak.website.config.SwaggerConfig"
+    }
+  ],
+  "hints": []
+}

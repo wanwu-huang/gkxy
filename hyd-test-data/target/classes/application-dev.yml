@@ -1,0 +1,70 @@
+server:
+  port: 8801
+
+spring:
+  application:
+    name: mentpeak-official-website
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://47.114.160.66:3306/hyd?serverTimezone=GMT%2B8
+    url: jdbc:mysql://47.114.160.66:3306/education-platform?serverTimezone=GMT%2B8
+    username: server
+    password: dev4Server!
+    hikari:
+      connection-timeout: 60000
+      validation-timeout: 3000
+      idle-timeout: 60000
+      login-timeout: 5
+      max-lifetime: 60000
+      maximum-pool-size: 10
+      minimum-idle: 10
+      read-only: false
+
+
+  servlet:
+    multipart:
+      max-file-size: 20MB     # 最大上传单个文件大小 默认 1M
+      max-request-size: 100MB  # 最大总上传数据大小 默认 10M
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:**/mapper/xml/*.xml
+  #自3.3.0开始,默认使用雪花算法+UUID(不含中划线),不配也无所谓
+  global-config:
+    # 逻辑删除配置 自3.3.0开始在删除实体类字段delete可忽略不配置@TableLogic
+    db-config:
+      logic-delete-field: deleted
+      # 删除前
+      logic-not-delete-value: 0
+      # 删除后
+      logic-delete-value: 1
+      id-type: assign_id
+
+
+platform:
+  swagger:
+    title: 海医大数据导入接口文档
+    version: v1.0
+    termsOfServiceUrl: https://www.mentpeak.com
+    description: 海医大数据导入API接口文档
+    basePackage:
+    name: hzl
+    url: www.xxx.com
+    email: xxx@mentpeak.com
+    groupName: 1.0.0 版本
+
+knife4j:
+  enable: true       # 开启增强功能
+  production:  false # 是否生产环境 如果为true停用Knife4j文档
+  basic:
+    enable: false     # 开启Swagger的Basic认证功能,默认是false
+    username: test   # Basic认证用户名
+    password: test   # Basic认证密码
+  setting:  # 自定义footer 版本 >=2.0.8
+    enableFooter: false    # 禁用默认 footer显示
+    enableFooterCustom: true  # 自定义footer
+    # 自定义显示内容
+    footerCustomContent: © 2021 [mentpeak](https://www.mentpeak.com)
